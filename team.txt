@@ -1,2 +1,3 @@
 ﻿Bunko-Boys: [Bunko-Boys]
 String_value = "bunko_boys"
+players = "Ethan", "Matthew", "Sanjay", "Connor"
