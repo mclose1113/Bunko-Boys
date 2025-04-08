@@ -1,3 +1,4 @@
 ﻿Bunko-Boys: [Bunko-Boys]
 String_value = "bunko_boys"
-players = "Ethan", "Matthew", "Sanjay", "Connor"
+players = ["Ethan", "Matthew", "Sanjay", "Connor"]
+scores = {player: 0 for player in players}
