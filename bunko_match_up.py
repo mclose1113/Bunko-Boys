@@ -1,11 +1,12 @@
-previous_scores = {"Team A": 20,
-                    "Team B": 20,
-                    "Team C": 15,
-                    "Team D": 40,
-                    "Team E": 1,
-                    "Team F": 5,
-                    "Team G": 6,
-                    "Team H": 30}
+#Test data
+# previous_scores = {"Team A": 20,
+#                     "Team B": 20,
+#                     "Team C": 15,
+#                     "Team D": 40,
+#                     "Team E": 1,
+#                     "Team F": 5,
+#                     "Team G": 6,
+#                     "Team H": 30}
                     
 
 
@@ -40,6 +41,7 @@ def match_up(scores):
     
     return new_matches
      
-    
-match_up(previous_scores)
+
+#Test
+# match_up(previous_scores)
 
