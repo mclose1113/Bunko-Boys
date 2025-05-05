@@ -13,10 +13,14 @@ def bunko_game():
     
     """
     gamestate = True
-    match_up()  
-    # ^ set up the match before starting the game
-    total_scores = [0, 0, 0, 0]
-    # added a new variable that holds all the scores
+    # dict of the total scores, each key has a value of a list, the list is the 
+    # round by round score
+    total_scores = {
+        "Player 1": [],
+        "Player 2": [],
+        "Player 3": [],
+        "Player 4": []
+    }
     #loop that iterates through the six rounds 
     while gamestate:
         round_num = 1
@@ -74,10 +78,11 @@ def bunko_game():
             print(f"Player 2 score: {player2_score}")
             print(f"Player 3 score: {player3_score}")
             print(f"Player 4 score: {player4_score}\n")
-            total_scores[0] += player1_score
-            total_scores[1] += player2_score
-            total_scores[2] += player3_score
-            total_scores[3] += player4_score
+            # appends the round score to the list inside of the dict
+            total_scores["Player 1"].append(player1_score)
+            total_scores["Player 2"].append(player2_score)
+            total_scores["Player 3"].append(player3_score)
+            total_scores["Player 4"].append(player4_score)
             #Add 1 to round number 
             round_num += 1
             #If the round is at the max six to end the game 
