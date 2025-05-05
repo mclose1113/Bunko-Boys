@@ -2,6 +2,7 @@ from random import randint
 from evaluate_bunko_roll import evaluate_bunko_roll
 from bunko_match_up import match_up
 from bunko import total_bunko_scores
+from Players_teams import PlayerTeams
 
 def bunko_game():
     """Iterates through the six rounds of the game and adds up each players
@@ -13,25 +14,37 @@ def bunko_game():
     
     """
     gamestate = True
+    # default number of players is 4 for now 
+    num_players = 4
+    # init's the class with num_players
+    team_splitter = PlayerTeams(num_players)
+    # ask for their names
+    team_splitter.ask_name()
+    player1_name = team_splitter.player_names[0]
+    player2_name = team_splitter.player_names[1]
+    player3_name = team_splitter.player_names[2]
+    player4_name = team_splitter.player_names[3]
+    # make the teams
+    team_splitter.make_teams(shuffle = True)
+    # print who is on a team together (havent added in the team names yet)
+    for team in team_splitter.teams:
+        print(f"team: {team[0]} and {team[1]}")
     # dict of the total scores, each key has a value of a list, the list is the 
-    # round by round score
-    total_scores = {
-        "Player 1": [],
-        "Player 2": [],
-        "Player 3": [],
-        "Player 4": []
-    }
+    # round by round score, (change)it can now take the names from team_splitter
+    total_scores = {name: [] for name in team_splitter.player_names}
+    
     #loop that iterates through the six rounds 
     while gamestate:
         round_num = 1
         #Each round of the game
         while round_num <= 6:
+            #Continues to roll new three die for each player while no one has
+            #Gotten over the 21 score to win the round
+            # create the score variables 
             player1_score = 0
             player2_score = 0
             player3_score = 0
             player4_score = 0
-            #Continues to roll new three die for each player while no one has
-            #Gotten over the 21 score to win the round
             while (player1_score <=20 and player2_score <=20 and
                 player3_score <=20 and player4_score <=20):
                 #Determines the players score and rolls their dice
@@ -74,15 +87,16 @@ def bunko_game():
             #Print the results after the round it done to show each players
             #score        
             print(f"Round {round_num} results:")
-            print(f"Player 1 score: {player1_score}")
-            print(f"Player 2 score: {player2_score}")
-            print(f"Player 3 score: {player3_score}")
-            print(f"Player 4 score: {player4_score}\n")
+            # needed to change logic so now it prints their name, and then score
+            print(f"{player1_name} score: {player1_score}")
+            print(f"{player2_name} score: {player2_score}")
+            print(f"{player3_name} score: {player3_score}")
+            print(f"{player4_name} score: {player4_score}\n")
             # appends the round score to the list inside of the dict
-            total_scores["Player 1"].append(player1_score)
-            total_scores["Player 2"].append(player2_score)
-            total_scores["Player 3"].append(player3_score)
-            total_scores["Player 4"].append(player4_score)
+            total_scores[player1_name].append(player1_score)
+            total_scores[player2_name].append(player2_score)
+            total_scores[player3_name].append(player3_score)
+            total_scores[player4_name].append(player4_score)
             #Add 1 to round number 
             round_num += 1
             #If the round is at the max six to end the game 
