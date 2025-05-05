@@ -20,7 +20,8 @@ def evaluate_bunko_roll(round_number, roll):
     if roll[0] == roll[1] == roll[2]:
         if roll[0] == round_number:
             # checking for bunko 
-            bunko = True
+            print("BUNKO!")
+            return "BUNKO!"
         else:
             score += roll[0]
     if set(roll) == {2,4,6} and round_number % 2 == 1:
@@ -36,8 +37,7 @@ def evaluate_bunko_roll(round_number, roll):
         score += roll.count(round_number)
     # if none of the four rules are proc'd than nothing happens with the score 
     print(f"Score: {score}")
-    if bunko:
-        print("BUNKO!")
+    return score
 # tests:
 # print("test 1: bunko")
 # evaluate_bunko_roll(1, (1, 1, 1))
