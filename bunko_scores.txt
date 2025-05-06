@@ -1,32 +1,30 @@
-Team Name: g
-Round 1 = 4
-Round 2 = 16
-Round 3 = 21
-Round 4 = 8
-Round 5 = 16
-Round 6 = 16
-g's total score is 81
-Team Name: gg
-Round 1 = 14
+Team Name:     return result
+Round 1 = 18
 Round 2 = 21
 Round 3 = 18
-Round 4 = 11
-Round 5 = 11
-Round 6 = 19
-gg's total score is 94
-Team Name: ggg
-Round 1 = 21
-Round 2 = 16
-Round 3 = 15
-Round 4 = 6
+Round 4 = 21
 Round 5 = 21
-Round 6 = 21
-ggg's total score is 100
-Team Name: gggg
-Round 1 = 18
-Round 2 = 14
-Round 3 = 3
-Round 4 = 24
-Round 5 = 19
+Round 6 = 15
+    return result's total score is 114
+Team Name: g
+Round 1 = 23
+Round 2 = 8
+Round 3 = 21
+Round 4 = 16
+Round 5 = 24
 Round 6 = 18
-gggg's total score is 96
+Round 7 = 16
+Round 8 = 10
+Round 9 = 18
+Round 10 = 13
+Round 11 = 15
+Round 12 = 19
+g's total score is 201
+Team Name: gg
+Round 1 = 13
+Round 2 = 17
+Round 3 = 11
+Round 4 = 14
+Round 5 = 7
+Round 6 = 21
+gg's total score is 83

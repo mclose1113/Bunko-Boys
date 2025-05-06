@@ -4,6 +4,11 @@ Method/Function---------Primary author----------Techniques demonstrated
 
 make_teams()------------Matthew Close-----------Sequence Unpacking, Optional Parameters
 
+str() in PlayerTeams----Matthew Close-----------Magic Methods
+
+
+evaluate_bunko_roll()---Matthew Close-----------f-strings containing expressions
+
 
 ## sources: 
 Matthew used stackoverflow in order to figure out how to itterate over a 

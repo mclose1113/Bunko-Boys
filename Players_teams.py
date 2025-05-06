@@ -41,6 +41,12 @@ class PlayerTeams:
             # if it is uneven, it lets the last player know
             else:
                 print(f"{names[player]} has no teammate")
+    def __str__(self):
+        # magic method to print who is in a team together
+        result = ""
+        for team in self.teams:
+            result += f"Team: {team[0]} and {team[1]}\n"
+        return result
 #tests
 # pt = PlayerTeams(4) #tests if it works with 4 people
 # pt.player_names = ["matty", "fatty", "gyatty", "latty"] 

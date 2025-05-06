@@ -30,8 +30,7 @@ def bunko_game():
     # make the teams
     team_splitter.make_teams(shuffle = shuffle_teams)
     # print who is on a team together (havent added in the team names yet)
-    for team in team_splitter.teams:
-        print(f"team: {team[0]} and {team[1]}")
+    print(team_splitter)
     # dict of the total scores, each key has a value of a list, the list is the 
     # round by round score, (change)it can now take the names from team_splitter
     total_scores = {name: [] for name in team_splitter.player_names}
