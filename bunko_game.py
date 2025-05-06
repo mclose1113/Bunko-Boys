@@ -24,8 +24,11 @@ def bunko_game():
     player2_name = team_splitter.player_names[1]
     player3_name = team_splitter.player_names[2]
     player4_name = team_splitter.player_names[3]
+    # ask the user if they want to shuffle the teams
+    shuffle_input = input("shuffle the teams? y/n:").strip().lower()
+    shuffle_teams = shuffle_input == "y"
     # make the teams
-    team_splitter.make_teams(shuffle = True)
+    team_splitter.make_teams(shuffle = shuffle_teams)
     # print who is on a team together (havent added in the team names yet)
     for team in team_splitter.teams:
         print(f"team: {team[0]} and {team[1]}")

@@ -18,3 +18,6 @@ https://stackoverflow.com/questions/33956772/extended-sequence-unpacking-in-pyth
 Matthew used stackoverflow to learn how to impliment the shuffle method of 
 random, and how it works with lists (also because of the make_teams() method). 
 https://stackoverflow.com/questions/976882/shuffling-a-list-of-objects
+
+bunko rules:
+https://www.dicegamedepot.com/bunco-rules/?srsltid=AfmBOoqWetMBg_sSTociGRKYCSG9V16xbmqvYttA56SAvFD_4NKIeA4t
