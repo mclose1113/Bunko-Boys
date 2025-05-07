@@ -50,42 +50,50 @@ def bunko_game():
             while (player1_score <=20 and player2_score <=20 and
                 player3_score <=20 and player4_score <=20):
                 #Determines the players score and rolls their dice
-                player1 = (dice_roll(1,6),dice_roll(1,6),dice_roll(1,6))
                 #If the player rolls bunko print it and continue the loop 
                 #Calls Matthew score function that requires a tuple of dice
                 #numbers and the round number
-                result = evaluate_bunko_roll(round_num, player1)
-                if result == "BUNKO!":
+                player1 = take_turn(round_num, player1_name)
+                if player1 == "BUNKO!":
                     print("BUNKO!")
+                    print()
                     continue
                 #If the roll is not bunko then add the score for those rolls
                 #to their total score 
                 else:
-                    player1_score += result
+                    player1_score += player1
+                    print(f"{player1_name} current score is {player1_score}")
+                    print()
                 #Player 2 turn
-                player2 = (dice_roll(1,6),dice_roll(1,6),dice_roll(1,6))
-                result = evaluate_bunko_roll(round_num, player2)
-                if result == "BUNKO!":
+                player2 = take_turn(round_num, player2_name)
+                if player2 == "BUNKO!":
                     print("BUNKO!")
+                    print()
                     continue
                 else:
-                    player2_score += result
+                    player2_score += player2
+                    print(f"{player2_name} current score is {player2_score}")
+                    print()
                 #Player 3 turn
-                player3 = (dice_roll(1,6),dice_roll(1,6),dice_roll(1,6))
-                result = evaluate_bunko_roll(round_num, player3)
-                if result == "BUNKO!":
+                player3 = take_turn(round_num, player3_name)
+                if player3 == "BUNKO!":
                     print("BUNKO!")
+                    print()
                     continue
                 else:
-                    player3_score += result
+                    player3_score += player3
+                    print(f"{player3_name} current score is {player3_score}")
+                    print()
                 #Player 4 turn
-                player4 = (dice_roll(1,6),dice_roll(1,6),dice_roll(1,6))
-                result = evaluate_bunko_roll(round_num, player4)
-                if result == "BUNKO!":
+                player4 = take_turn(round_num, player4_name)
+                if player4 == "BUNKO!":
                     print("BUNKO!")
+                    print()
                     continue
                 else:
-                    player4_score += result
+                    player4_score += player4
+                    print(f"{player4_name} current score is {player4_score}")
+                    print()
             #Print the results after the round it done to show each players
             #score        
             print(f"Round {round_num} results:")
@@ -103,7 +111,12 @@ def bunko_game():
             round_num += 1
             #If the round is at the max six to end the game 
             if round_num == 6:
-                gamestate = False
+                continue_game = input("Would you like to replay? y/n: ")
+                if continue_game.lower() == 'y':
+                   round_num = 1
+                else:
+                    gamestate = False 
+                
     total_bunko_scores(total_scores)
     
 def dice_roll(min, max):
@@ -118,6 +131,29 @@ def dice_roll(min, max):
     
     """
     return randint(min, max)
+
+def take_turn(round_num, player_name):
+    """Take turn is used to roll the die for the player and return the score
+    
+        Args:
+            round_num(int): the round number
+            player_name(str): the players name
+        
+        Returns:
+            score(int): is the score for that roll 
+            
+        Side effects:
+            prints the players name and what they scored for that turn
+
+    """
+    enter = input(f"{player_name} press enter to roll die: ")
+    die1 = dice_roll(1,6)
+    die2 = dice_roll(1,6)
+    die3 = dice_roll(1,6)
+    die = (die1, die2, die3)
+    print(f"{player_name} rolled {die}")
+    score = evaluate_bunko_roll(round_num, die)
+    return score
 
 if __name__ == "__main__":
     bunko_game()
