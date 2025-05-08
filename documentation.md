@@ -26,6 +26,10 @@ Method/Function---------Primary author----------Techniques demonstrated
 
 make_teams()------------Matthew Close-----------Sequence Unpacking, Optional Parameters
 
+ask_names()-------------Matthew Close-----------None
+
+init in in PlayerTeams--Matthew Close-----------None
+
 str() in PlayerTeams----Matthew Close-----------Magic Methods
 
 evaluate_bunko_roll()---Matthew Close-----------f-strings containing expressions
