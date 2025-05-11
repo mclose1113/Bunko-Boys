@@ -12,6 +12,8 @@ bunko_match_up.py
 
 bunko.py
 
+bunko_scoreboard.py
+
 Players_teams.py
 
 Open a terminal or command prompt
