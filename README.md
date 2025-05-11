@@ -32,7 +32,11 @@ Press Enter to roll dice during each turn
 
 Choose whether to play another game after all six rounds
 # Purpose of each file:
-Bunko.py:
+bunko.py: Creates a new txt file that inputs all the data from each score 
+per round per game that a player decides to play
+
+bunko_scoreboard.py: Creates a databse based on the score of each player per
+round and sums the score at the end in a final column. 
 
 Player_teams.py: takes care of taking player names and assigning them to teams, 
 with the option of team shuffling.
