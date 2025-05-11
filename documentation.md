@@ -28,7 +28,7 @@ random, and how it works with lists (also because of the make_teams() method).
 https://stackoverflow.com/questions/976882/shuffling-a-list-of-objects
 
 Ethan watched a Youtube video that explained the game to help understand
-how the loop should work and when there is a winner
+how the loop should work and when there is a winner 
 https://www.youtube.com/watch?v=qNgm0ThJZ2w
 
 bunko rules:
