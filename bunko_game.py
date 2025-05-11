@@ -207,13 +207,37 @@ def bunko_game():
                 
     total_bunko_scores(total_scores)
     """
+    Writes in a file each of the scores for each round and for each team. It 
+    then displays the total of each team's score.
     
-    
+    Args:
+        scores_dict (dict): A dictionary where the keys are player names (str), 
+            and the values are lists of scores (int) per round.
+            
+        filename (str): The name of the file to write the scores to which 
+            automatically is "bunko_scores.txt".
+
+    Returns:
+        None
+
+    Side effects:
+        Creates the file specified by the filename with each team's round scores 
+        and total score.
     """
     bunko_score(total_scores)
     """
-    
-    
+    Converts a dictionary of player scores into a pandas DataFrame,
+        adds a final total score column, and prints the final result.
+
+    Args:
+        player_scores (dict): A dictionary where the keys are player names (str) 
+        and the values are lists of integers with the scores per round.
+
+    Returns:
+        None
+
+    Side effects:
+        Prints the final DataFrame to the console.
     """
 
     
