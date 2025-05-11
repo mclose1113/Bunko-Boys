@@ -47,6 +47,7 @@ def bunko_game():
             player2_score = 0
             player3_score = 0
             player4_score = 0
+            bunko = False
             while (player1_score <=20 and player2_score <=20 and
                 player3_score <=20 and player4_score <=20):
                 #Determines the players score and rolls their dice
@@ -56,8 +57,11 @@ def bunko_game():
                 player1 = take_turn(round_num, player1_name)
                 if player1 == "BUNKO!":
                     print("BUNKO!")
+                    player1_score += 21
+                    bunko = True
+                    print(f"{player1_name} current score is {player1_score}")
                     print()
-                    continue
+                    break
                 #If the roll is not bunko then add the score for those rolls
                 #to their total score 
                 else:
@@ -68,8 +72,11 @@ def bunko_game():
                 player2 = take_turn(round_num, player2_name)
                 if player2 == "BUNKO!":
                     print("BUNKO!")
+                    player2_score += 21
+                    bunko = True
+                    print(f"{player2_name} current score is {player2_score}")
                     print()
-                    continue
+                    break
                 else:
                     player2_score += player2
                     print(f"{player2_name} current score is {player2_score}")
@@ -78,8 +85,11 @@ def bunko_game():
                 player3 = take_turn(round_num, player3_name)
                 if player3 == "BUNKO!":
                     print("BUNKO!")
+                    player3_score += 21
+                    bunko = True
+                    print(f"{player3_name} current score is {player3_score}")
                     print()
-                    continue
+                    break
                 else:
                     player3_score += player3
                     print(f"{player3_name} current score is {player3_score}")
@@ -88,12 +98,16 @@ def bunko_game():
                 player4 = take_turn(round_num, player4_name)
                 if player4 == "BUNKO!":
                     print("BUNKO!")
+                    player4_score += 21
+                    bunko = True
+                    print(f"{player4_name} current score is {player4_score}")
                     print()
-                    continue
+                    break
                 else:
                     player4_score += player4
                     print(f"{player4_name} current score is {player4_score}")
                     print()
+            
             #Print the results after the round it done to show each players
             #score        
             print(f"Round {round_num} results:")
@@ -110,7 +124,7 @@ def bunko_game():
             #Add 1 to round number 
             round_num += 1
             #If the round is at the max six to end the game 
-            if round_num > 6:
+            if round_num == 7:
                 continue_game = input("Would you like to replay? y/n: ")
                 if continue_game.lower() == 'y':
                    round_num = 1
