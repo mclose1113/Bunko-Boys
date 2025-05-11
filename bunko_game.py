@@ -29,6 +29,8 @@ def bunko_game():
     shuffle_teams = shuffle_input == "y"
     # make the teams
     team_splitter.make_teams(shuffle = shuffle_teams)
+    team1 = team_splitter.teams[0]
+    team2 = team_splitter.teams[1]
     # print who is on a team together (havent added in the team names yet)
     print(team_splitter)
     # dict of the total scores, each key has a value of a list, the list is the 
@@ -47,8 +49,11 @@ def bunko_game():
             player2_score = 0
             player3_score = 0
             player4_score = 0
-            while (player1_score <=20 and player2_score <=20 and
-                player3_score <=20 and player4_score <=20):
+            team1_score = 0
+            team2_score = 0
+            bunko = False
+            while team1_score < 21 and team2_score < 21:
+                # changed it so that it takes the teams score, not player 
                 #Determines the players score and rolls their dice
                 #If the player rolls bunko print it and continue the loop 
                 #Calls Matthew score function that requires a tuple of dice
@@ -56,43 +61,120 @@ def bunko_game():
                 player1 = take_turn(round_num, player1_name)
                 if player1 == "BUNKO!":
                     print("BUNKO!")
+                    player1_score += 21
+                    bunko = True
+                    # adds the 21 to the team as well as the player 
+                    if player1_name in team1:
+                        team1_score += 21
+                    else:
+                        team2_score += 21
+                    print(f"{player1_name} current score is {player1_score}")
+                    if player1_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                     continue
                 #If the roll is not bunko then add the score for those rolls
                 #to their total score 
                 else:
                     player1_score += player1
+                    if player1_name in team1:
+                        team1_score += player1
+                    else:
+                        team2_score += player1
                     print(f"{player1_name} current score is {player1_score}")
+                    if player1_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                 #Player 2 turn
                 player2 = take_turn(round_num, player2_name)
                 if player2 == "BUNKO!":
                     print("BUNKO!")
+                    player2_score += 21
+                    bunko = True
+                    if player2_name in team1:
+                        team1_score += 21
+                    else:
+                        team2_score += 21
+                    print(f"{player2_name} current score is {player2_score}")
+                    if player2_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                     continue
                 else:
                     player2_score += player2
+                    if player2_name in team1:
+                        team1_score += player2
+                    else:
+                        team2_score += player2
                     print(f"{player2_name} current score is {player2_score}")
+                    if player2_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                 #Player 3 turn
                 player3 = take_turn(round_num, player3_name)
                 if player3 == "BUNKO!":
                     print("BUNKO!")
+                    player3_score += 21
+                    bunko = True
+                    if player3_name in team1:
+                        team1_score += 21
+                    else:
+                        team2_score += 21
+                    print(f"{player3_name} current score is {player3_score}")
+                    if player3_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                     continue
                 else:
                     player3_score += player3
+                    if player3_name in team1:
+                        team1_score += player3
+                    else:
+                        team2_score += player3
                     print(f"{player3_name} current score is {player3_score}")
+                    if player3_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                 #Player 4 turn
                 player4 = take_turn(round_num, player4_name)
                 if player4 == "BUNKO!":
                     print("BUNKO!")
+                    player4_score += 21
+                    bunko = True
+                    if player4_name in team1:
+                        team1_score += 21
+                    else:
+                        team2_score += 21
+                    print(f"{player4_name} current score is {player4_score}")
+                    if player4_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
                     continue
                 else:
                     player4_score += player4
+                    if player4_name in team1:
+                        team1_score += player4
+                    else:
+                        team2_score += player4
                     print(f"{player4_name} current score is {player4_score}")
+                    if player4_name in team1:
+                        print(f"team 1 score: {team1_score}")
+                    else:
+                        print(f"team 2 score: {team2_score}")
                     print()
             #Print the results after the round it done to show each players
             #score        
@@ -102,6 +184,9 @@ def bunko_game():
             print(f"{player2_name} score: {player2_score}")
             print(f"{player3_name} score: {player3_score}")
             print(f"{player4_name} score: {player4_score}\n")
+            # now prints the teams score as well as personal score 
+            print(f"team 1 ({team1[0]} & {team1[1]}) score: {team1_score}")
+            print(f"team 2 ({team2[0]} & {team2[1]}) score: {team2_score}\n")
             # appends the round score to the list inside of the dict
             total_scores[player1_name].append(player1_score)
             total_scores[player2_name].append(player2_score)

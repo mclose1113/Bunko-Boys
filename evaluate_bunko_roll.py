@@ -23,7 +23,7 @@ def evaluate_bunko_roll(round_number, roll):
             print("BUNKO!")
             return "BUNKO!"
         else:
-            score += roll[0]
+            score += 5
     if set(roll) == {2,4,6} and round_number % 2 == 1:
         # this checks if the round number is odd, and if it is and they have all
         # 3 different even numbers in any order(via the set) they lose points
