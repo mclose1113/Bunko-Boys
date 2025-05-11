@@ -110,7 +110,7 @@ def bunko_game():
             #Add 1 to round number 
             round_num += 1
             #If the round is at the max six to end the game 
-            if round_num == 6:
+            if round_num > 6:
                 continue_game = input("Would you like to replay? y/n: ")
                 if continue_game.lower() == 'y':
                    round_num = 1
@@ -119,7 +119,7 @@ def bunko_game():
                 
     total_bunko_scores(total_scores)
     
-def dice_roll(min, max):
+def dice_roll(min=1, max=6):
     """Returns a rolled dice based on a minimum number and max number
     
     Args:
@@ -147,9 +147,9 @@ def take_turn(round_num, player_name):
 
     """
     enter = input(f"{player_name} press enter to roll die: ")
-    die1 = dice_roll(1,6)
-    die2 = dice_roll(1,6)
-    die3 = dice_roll(1,6)
+    die1 = dice_roll()
+    die2 = dice_roll()
+    die3 = dice_roll()
     die = (die1, die2, die3)
     print(f"{player_name} rolled {die}")
     score = evaluate_bunko_roll(round_num, die)
