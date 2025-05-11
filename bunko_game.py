@@ -3,6 +3,8 @@ from evaluate_bunko_roll import evaluate_bunko_roll
 from bunko_match_up import match_up
 from bunko import total_bunko_scores
 from Players_teams import PlayerTeams
+from bunko_scoreboard import bunko_score
+
 
 def bunko_game():
     """Iterates through the six rounds of the game and adds up each players
@@ -74,7 +76,7 @@ def bunko_game():
                     else:
                         print(f"team 2 score: {team2_score}")
                     print()
-                    continue
+                    break
                 #If the roll is not bunko then add the score for those rolls
                 #to their total score 
                 else:
@@ -105,7 +107,7 @@ def bunko_game():
                     else:
                         print(f"team 2 score: {team2_score}")
                     print()
-                    continue
+                    break
                 else:
                     player2_score += player2
                     if player2_name in team1:
@@ -134,7 +136,7 @@ def bunko_game():
                     else:
                         print(f"team 2 score: {team2_score}")
                     print()
-                    continue
+                    break
                 else:
                     player3_score += player3
                     if player3_name in team1:
@@ -163,7 +165,7 @@ def bunko_game():
                     else:
                         print(f"team 2 score: {team2_score}")
                     print()
-                    continue
+                    break
                 else:
                     player4_score += player4
                     if player4_name in team1:
@@ -176,6 +178,7 @@ def bunko_game():
                     else:
                         print(f"team 2 score: {team2_score}")
                     print()
+            
             #Print the results after the round it done to show each players
             #score        
             print(f"Round {round_num} results:")
@@ -195,7 +198,7 @@ def bunko_game():
             #Add 1 to round number 
             round_num += 1
             #If the round is at the max six to end the game 
-            if round_num == 6:
+            if round_num == 7:
                 continue_game = input("Would you like to replay? y/n: ")
                 if continue_game.lower() == 'y':
                    round_num = 1
@@ -203,8 +206,18 @@ def bunko_game():
                     gamestate = False 
                 
     total_bunko_scores(total_scores)
+    """
     
-def dice_roll(min, max):
+    
+    """
+    bunko_score(total_scores)
+    """
+    
+    
+    """
+
+    
+def dice_roll(min=1, max=6):
     """Returns a rolled dice based on a minimum number and max number
     
     Args:
@@ -232,9 +245,9 @@ def take_turn(round_num, player_name):
 
     """
     enter = input(f"{player_name} press enter to roll die: ")
-    die1 = dice_roll(1,6)
-    die2 = dice_roll(1,6)
-    die3 = dice_roll(1,6)
+    die1 = dice_roll()
+    die2 = dice_roll()
+    die3 = dice_roll()
     die = (die1, die2, die3)
     print(f"{player_name} rolled {die}")
     score = evaluate_bunko_roll(round_num, die)
