@@ -84,6 +84,10 @@ bunko_game()---Ethan Patrick------- f-strings
 
 dice_roll()--Ethan Patrick-------- Optional Parameters 
 
+total_bunko_scores()-----Connor Nguyen----- with statements
+
+bunko_score()------- Connor Nguyen ----- Pandas Dataframes
+
 ## sources: 
 Matthew used stackoverflow in order to figure out how to itterate over a 
 dictionary of lists, which was nessassary because we can now track score round 
