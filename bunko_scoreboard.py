@@ -11,7 +11,8 @@ Returns:
      None
 
 Side effects:
-    Prints the final DataFrame to the console.
+    Prints the final DataFrame to the console that includes the player total
+    score and if the player is lucky.
 """
 
 def bunko_score(player_scores):
@@ -24,5 +25,10 @@ def bunko_score(player_scores):
     df.columns = round_columns
     
     df["Total Player Score"] = df.sum(axis=1) #adds a total score column and sums each row
+    #Groups scored by how "lucky" they are which is determined if their total score
+    #is greater than 60.
+    df["Luckiness"] = df["Total Player Score"].apply(lambda x: "Lucky" if x > 60 else "Unlucky")
+    luckiness = df.groupby("Luckiness")["Total Player Score"].sum()
 
     print(df.to_string()) 
+    print(luckiness.to_string())
