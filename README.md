@@ -102,5 +102,10 @@ Ethan watched a Youtube video that explained the game to help understand
 how the loop should work and when there is a winner 
 https://www.youtube.com/watch?v=qNgm0ThJZ2w
 
+Connor used pandas documentation in order to figure out other ways to create and manupulate 
+a dataframe which was necessary as we can now display our total scores in an organized manner so 
+the user/users can see each of their scores per round without having to scroll repeatedly. 
+https://pandas.pydata.org/docs/index.html
+
 bunko rules:
 https://www.dicegamedepot.com/bunco-rules/?srsltid=AfmBOoqWetMBg_sSTociGRKYCSG9V16xbmqvYttA56SAvFD_4NKIeA4t
