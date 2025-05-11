@@ -1,30 +1,32 @@
-Team Name:     return result
-Round 1 = 18
-Round 2 = 21
-Round 3 = 18
+Team Name: matthew
+Round 1 = 22
+Round 2 = 14
+Round 3 = 22
+Round 4 = 12
+Round 5 = 7
+Round 6 = 13
+matthew's total score is 90
+Team Name: bruh
+Round 1 = 19
+Round 2 = 12
+Round 3 = 12
+Round 4 = 8
+Round 5 = 12
+Round 6 = 17
+bruh's total score is 80
+Team Name: matty
+Round 1 = 14
+Round 2 = 22
+Round 3 = 12
 Round 4 = 21
 Round 5 = 21
-Round 6 = 15
-    return result's total score is 114
-Team Name: g
-Round 1 = 23
-Round 2 = 8
-Round 3 = 21
-Round 4 = 16
-Round 5 = 24
-Round 6 = 18
-Round 7 = 16
-Round 8 = 10
-Round 9 = 18
-Round 10 = 13
-Round 11 = 15
-Round 12 = 19
-g's total score is 201
-Team Name: gg
-Round 1 = 13
-Round 2 = 17
-Round 3 = 11
-Round 4 = 14
-Round 5 = 7
 Round 6 = 21
-gg's total score is 83
+matty's total score is 111
+Team Name: fatty
+Round 1 = 14
+Round 2 = 12
+Round 3 = 14
+Round 4 = 16
+Round 5 = 17
+Round 6 = 12
+fatty's total score is 85
