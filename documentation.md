@@ -24,15 +24,13 @@ bunkos usually.
 ## Atribution Table: 
 Method/Function---------Primary author----------Techniques demonstrated
 
-make_teams()------------Matthew Close-----------Sequence Unpacking, Optional Parameters
-
-ask_names()-------------Matthew Close-----------None
-
-init in in PlayerTeams--Matthew Close-----------None
+make_teams()------------Matthew Close-----------Sequence Unpacking
 
 str() in PlayerTeams----Matthew Close-----------Magic Methods
 
-evaluate_bunko_roll()---Matthew Close-----------f-strings containing expressions
+bunko_game()---Ethan Patrick------- f-strings
+
+dice_roll()--Ethan Patrick-------- Optional Parameters 
 
 
 ## sources: 
@@ -48,6 +46,10 @@ https://stackoverflow.com/questions/33956772/extended-sequence-unpacking-in-pyth
 Matthew used stackoverflow to learn how to impliment the shuffle method of 
 random, and how it works with lists (also because of the make_teams() method). 
 https://stackoverflow.com/questions/976882/shuffling-a-list-of-objects
+
+Ethan watched a Youtube video that explained the game to help understand
+how the loop should work and when there is a winner 
+https://www.youtube.com/watch?v=qNgm0ThJZ2w
 
 bunko rules:
 https://www.dicegamedepot.com/bunco-rules/?srsltid=AfmBOoqWetMBg_sSTociGRKYCSG9V16xbmqvYttA56SAvFD_4NKIeA4t
