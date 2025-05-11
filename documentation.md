@@ -34,6 +34,10 @@ str() in PlayerTeams----Matthew Close-----------Magic Methods
 
 evaluate_bunko_roll()---Matthew Close-----------f-strings containing expressions
 
+match_up()--------------Sanjay Fernando---------lambda expressions
+
+
+
 
 ## sources: 
 Matthew used stackoverflow in order to figure out how to itterate over a 
