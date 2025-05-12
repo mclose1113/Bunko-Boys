@@ -5,6 +5,19 @@ Bunko is a dice game usually with a number of people divisible by 4 with teams
 of 2 people each. It is usually 4 people (2 teams) per individual game, and each
 player takes turns rolling three dice to earn points. In each game there is a
 round system, a game lasts 6 rounds, and a round ends when someone gets to 21
+
+### How to run?
+To run the game, you can input optional command line arguments when running the 
+python script, or type player names and shuffle preferences during the game. To
+use the command line arguments, run the game as:
+
+python3 bunko_game.py --players NAME NAME NAME NAME --shufle YES/NO
+
+Type your chosen names in place of NAME and YES or NO.
+If command line arguments are not given, then you can choose during the start
+of the game in the terminal.
+**On windows, you do not need to put 3 after python when starting the script.
+
 ### Scoring
 Scoring can be a little complicated at first, but easy once you get the hang of
 it. During each round, players try to roll the same number on the dice as the 
@@ -37,9 +50,9 @@ total_bunko_scores()-----Connor Nguyen----- with statements
 
 bunko_score()------- Connor Nguyen ----- Pandas Usage
 
-match_up()--------------Sanjay Fernando---------lambda expressions
+match_up()--------------Sanjay Fernando---------Lambda expression
 
-
+parse_args()------------Sanjay Fernando----------ArgumentParser
 
 
 ## sources: 
@@ -65,6 +78,12 @@ manupulate a dataframe which was necessary as we can now display our total score
 in an organized manner so the user/users can see each of their scores per round without
 having to scroll repeatedly.
 https://pandas.pydata.org/docs/index.html
+
+Sanjay used stackoverflow to get a better understanding of how the 
+Argparse module and Argumentparser class work, in order to add optional
+command line arguments for player names and shuffle in the parse_args() function.
+https://stackoverflow.com/questions/40710719/optional-command-line-arguments
+
 
 bunko rules:
 https://www.dicegamedepot.com/bunco-rules/?srsltid=AfmBOoqWetMBg_sSTociGRKYCSG9V16xbmqvYttA56SAvFD_4NKIeA4t

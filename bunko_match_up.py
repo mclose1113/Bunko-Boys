@@ -1,47 +1,36 @@
-#Test data
-# previous_scores = {"Team A": 20,
-#                     "Team B": 20,
-#                     "Team C": 15,
-#                     "Team D": 40,
-#                     "Team E": 1,
-#                     "Team F": 5,
-#                     "Team G": 6,
-#                     "Team H": 30}
+# Test data
+# previous_scores = {"Player A": 20,
+#                     "Player B": 20,
+#                     "Player C": 15,
+#                     "Team D": 40,}                    
                     
 
 
 def match_up(scores):
-    """ Determines which teams from the previous round play eachother in the 
-        next round based on score.
-
+    """ Determines which players will comprise the teams of a subsequent match
+        based on score.
     Args:
-        scores(dict): The scores of the previous teams. Does not need to be
-        organized/ordered. Team names are keys and scores are values.
+        scores(dict): The scores of the previous teams.
+        Team names are keys and scores are values.
         
     Returns:
-        new_matches(dict): The matchups of teams from the previous round
-        based on scores. 
+        new_matches(dict): The matchups of players in teams
+        from the previous round based on scores. 
     
     Side Effects:
-        prints the the new match ups from the new_matches dict.
+        prints the the new teams from the new_matches dict.
     
     """
     
     #Sorting the scores dictionary in descending order by score.
-    ordered = sorted(scores, key = lambda team: scores[team],reverse = True)
-    new_matches = {}
-    print( "\nThe new match-ups are: \n")
-    
-    #Iterating over ordered list to add to the new matches dict in pairs and
-    # print a VS message.
-    for team in range(0, len(ordered) - 1, 2): 
-        
-        new_matches[ordered[team]] = ordered[team + 1]
-        print(f"{ordered[team]} VS {ordered[team + 1]}")
-    
-    return new_matches
+    ordered = sorted(scores, key = lambda player: scores[player],reverse = True)
+    #Assigning teams
+    team1 = (ordered[0], ordered[3])
+    team2 = (ordered[1],ordered[2])
+    print(f"Team 1 is now {team1[0]} & {team1[1]}! \n"
+          f"Team 2 is now {team2[0]} & {team2[1]} \n")
+    return team1, team2
      
-
 #Test
 # match_up(previous_scores)
 

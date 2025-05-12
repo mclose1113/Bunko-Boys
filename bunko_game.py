@@ -1,3 +1,4 @@
+from argparse import ArgumentParser
 from random import randint
 from evaluate_bunko_roll import evaluate_bunko_roll
 from bunko_match_up import match_up
@@ -6,7 +7,7 @@ from Players_teams import PlayerTeams
 from bunko_scoreboard import bunko_score
 
 
-def bunko_game():
+def bunko_game(player_names=None, shuffle_teams=False):
     """Iterates through the six rounds of the game and adds up each players
     score and determine who wins each round
     
@@ -20,15 +21,24 @@ def bunko_game():
     num_players = 4
     # init's the class with num_players
     team_splitter = PlayerTeams(num_players)
-    # ask for their names
-    team_splitter.ask_name()
+    
+    if player_names:
+        team_splitter.player_names = player_names
+    
+    else:
+        # ask for their names if not Command line args
+        team_splitter.ask_name()
+        
     player1_name = team_splitter.player_names[0]
     player2_name = team_splitter.player_names[1]
     player3_name = team_splitter.player_names[2]
     player4_name = team_splitter.player_names[3]
-    # ask the user if they want to shuffle the teams
-    shuffle_input = input("shuffle the teams? y/n:").strip().lower()
-    shuffle_teams = shuffle_input == "y"
+        
+    if shuffle_teams is not True or False:
+        # ask the user if they want to shuffle the teams if not Command line arg
+        shuffle_input = input("shuffle the teams? y/n:").strip().lower()
+        shuffle_teams = shuffle_input == "y"
+        
     # make the teams
     team_splitter.make_teams(shuffle = shuffle_teams)
     team1 = team_splitter.teams[0]
@@ -205,6 +215,20 @@ def bunko_game():
                 else:
                     gamestate = False 
                 
+                #Asking if they want new teams based on score
+                new_teams = input("Would you like to make new score-based"
+                                  "teams? y/n: \n")
+                if new_teams.lower().strip() == 'y':
+                    #Making a dictionary of individual player scores
+                    player_scores = {player1_name:player1_score, 
+                                     player2_name:player2_score, 
+                                     player3_name:player3_score,
+                                     player4_name:player4_score}
+                    team1, team2 = match_up(player_scores)
+                else:
+                    continue
+                    
+    
     total_bunko_scores(total_scores)
     """
     Writes in a file each of the scores for each round and for each team. It 
@@ -277,5 +301,17 @@ def take_turn(round_num, player_name):
     score = evaluate_bunko_roll(round_num, die)
     return score
 
+def parse_args():
+    parser = ArgumentParser()
+    parser.add_argument("--players", nargs= 4, 
+                        help= "Names for 4 players")
+    parser.add_argument("--shuffle",choices=["yes", "no"], 
+                        help= "Shuffle? yes or no")
+    args = parser.parse_args()
+    shuffle_teams = args.shuffle == "yes"
+    return args, shuffle_teams
+
 if __name__ == "__main__":
-    bunko_game()
+    args, shuffle_teams = parse_args()
+    bunko_game(player_names=args.players, shuffle_teams=shuffle_teams)
+    
