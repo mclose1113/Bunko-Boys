@@ -70,13 +70,7 @@ Method/Function---------Primary author----------Techniques demonstrated
 
 make_teams()------------Matthew Close-----------Sequence Unpacking
 
-ask_names()-------------Matthew Close-----------None
-
-init in in PlayerTeams--Matthew Close-----------None
-
 str() in PlayerTeams----Matthew Close-----------Magic Methods
-
-evaluate_bunko_roll()---Matthew Close-----------None
 
 bunko_game()---Ethan Patrick------- f-strings
 
