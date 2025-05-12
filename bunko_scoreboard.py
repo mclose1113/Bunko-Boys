@@ -3,6 +3,11 @@ import pandas as pd
 Converts a dictionary of player scores into a pandas DataFrame,
     adds a total score column, and prints the final result.
 
+    Primary Author: 
+        Connor Nguyen
+    Technique(s):
+        Pandas Dataframes
+
 Args:
     player_scores (dict): A dictionary where the keys are player names (str) and the values are lists of 
         integers with the scores per round.

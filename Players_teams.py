@@ -2,6 +2,10 @@ import random
 class PlayerTeams:
     def __init__(self, num_players):
         """Init's the class with the given number of player playing the game.
+        Primary Author: 
+            Matthew Close
+        Technique(s):
+            None
 
         Args:
             num_players (int): number of players in given bunko game.
@@ -12,6 +16,11 @@ class PlayerTeams:
     def ask_name(self):
         """Asks the players for their names and then adds it to the list of name
         
+        Primary Author: 
+            Matthew Close
+        Technique(s):
+            None
+
         Side effects:
             self.player_names (list of str): appends the names of given players
         """
@@ -21,6 +30,11 @@ class PlayerTeams:
 
     def make_teams(self, shuffle = False):
         """Makes teams of 2 people per team.
+        
+        Primary Author: 
+            Matthew Close
+        Technique(s):
+            Sequence Unpacking
 
         Args:
             shuffle (bool, optional): if stated as true, then it shuffles the 
@@ -42,6 +56,16 @@ class PlayerTeams:
             else:
                 print(f"{names[player]} has no teammate")
     def __str__(self):
+        """when the class is printed this will print the teams
+
+        Primary Author: 
+            Matthew Close
+        Technique(s):
+            Magic Methods
+
+        Returns:
+            str: a string displaying who is on a team together
+        """
         # magic method to print who is in a team together
         result = ""
         for team in self.teams:

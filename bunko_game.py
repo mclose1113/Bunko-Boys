@@ -10,6 +10,10 @@ from bunko_scoreboard import bunko_score
 def bunko_game(player_names=None, shuffle_teams=False):
     """Iterates through the six rounds of the game and adds up each players
     score and determine who wins each round
+    Primary Author: 
+        Ethan Patrick
+    Technique(s):
+        f-strings
     
     Side Effects:
         prints the results of each round and the total score of each player

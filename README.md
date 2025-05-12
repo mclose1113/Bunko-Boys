@@ -4,16 +4,11 @@ Download all of the files in the git repo
 
 Ensure you have all the following files in the same directory:
 
-bunko_game.py
-
-evaluate_bunko_roll.py
-
-bunko_match_up.py
-
-bunko.py
-
-bunko_scoreboard.py
-
+bunko_game.py,
+evaluate_bunko_roll.py,
+bunko_match_up.py,
+bunko.py,
+bunko_scoreboard.py,
 Players_teams.py
 
 Open a terminal or command prompt
@@ -22,11 +17,13 @@ navigate to the directory where the files are located
 
 run: python bunko_game.py
 
+optional command line arguments: Names for 4 players and Shuffle? (yes or no)
+
 then it will ask you for imputs which include:
 
-Enter player names
+Enter player names (if you didnt in the command line)
 
-Choose whether to shuffle teams
+Choose whether to shuffle teams (if you didnt in the command line)
 
 Press Enter to roll dice during each turn
 
@@ -88,6 +85,10 @@ dice_roll()--Ethan Patrick-------- Optional Parameters
 total_bunko_scores()-----Connor Nguyen----- with statement
 
 bunko_score()------- Connor Nguyen ----- Pandas Dataframes
+
+match_up()--------------Sanjay Fernando---------Lambda expression
+
+parse_args()------------Sanjay Fernando----------ArgumentParser
 
 ## sources: 
 Matthew used stackoverflow in order to figure out how to itterate over a 

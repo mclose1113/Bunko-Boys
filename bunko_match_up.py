@@ -9,6 +9,10 @@
 def match_up(scores):
     """ Determines which players will comprise the teams of a subsequent match
         based on score.
+    Primary Author: 
+        Sanjay Fernando
+    Technique(s):
+        Lambda expression
     Args:
         scores(dict): The scores of the previous teams.
         Team names are keys and scores are values.

@@ -1,6 +1,10 @@
 def evaluate_bunko_roll(round_number, roll):
     """totals the score of a persons dice(3 random int) roll in a round of Bunko
-
+    
+    Primary Author: 
+        Matthew Close
+    Technique(s):
+        None 
 
     Args:
         round_number (int): The current round number 1-6

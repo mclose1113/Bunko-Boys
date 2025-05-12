@@ -2,6 +2,11 @@ def total_bunko_scores(scores_dict, filename= "bunko_scores.txt"):
     """
     Writes in a file each of the scores for each round and for each team. It then displays the total of each team's score.
     
+    Primary Author: 
+        Connor Nguyen
+    Technique(s):
+        with statement
+
     Args:
         scores_dict (dict): A dictionary where the keys are player names (str), 
             and the values are lists of scores (int) per round.
