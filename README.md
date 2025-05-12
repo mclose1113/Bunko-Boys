@@ -35,8 +35,9 @@ Choose whether to play another game after all six rounds
 bunko.py: Creates a new txt file that inputs all the data from each score 
 per round per game that a player decides to play
 
-bunko_scoreboard.py: Creates a databse based on the score of each player per
-round and sums the score at the end in a final column. 
+bunko_scoreboard.py: Creates a database based on the score of each player per
+round and sums the score at the end in a final column. It will also tell you
+if you are unlucky or lucky based on your total score.
 
 Player_teams.py: takes care of taking player names and assigning them to teams, 
 with the option of team shuffling.
@@ -84,7 +85,7 @@ bunko_game()---Ethan Patrick------- f-strings
 
 dice_roll()--Ethan Patrick-------- Optional Parameters 
 
-total_bunko_scores()-----Connor Nguyen----- with statements
+total_bunko_scores()-----Connor Nguyen----- with statement
 
 bunko_score()------- Connor Nguyen ----- Pandas Dataframes
 
