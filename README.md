@@ -42,7 +42,13 @@ with the option of team shuffling.
 evaluate_bunko_roll.py: has the logic to evaluate a player's dice roll and 
 return their score based on the current round.
 
-etc...
+bunko_game.py: this is the main game loop that iterates through all six rounds
+rolls the die for each turn as well as displays the scores for each player and 
+scores for each team.
+
+bunko_match_up.py: this is the function that will create new teams based on 
+score. It puts the first and last player on a team together and puts the two 
+players in the middle on a team. 
 ## What is Bunko?
 ### Rules:
 Bunko is a dice game usually with a number of people divisible by 4 with teams 
